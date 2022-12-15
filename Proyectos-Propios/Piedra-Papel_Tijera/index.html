@@ -1,1 +1,103 @@
+<html>
 
+<head>
+    <meta charset="utf-8" />
+    <title>Algoritmo piedra, papel o tijera</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+    <section id="inicio">
+        <h1 class="titulo">Piedra, papel o tijera</h1>
+
+        <button id="boton-iniciar">JUGAR</button>
+
+        <div id="opciones">
+            <div>
+                <label>Jugador 1:
+                    <input id="input-jugador" />
+                </label>
+                <label>Jugador 2:
+                    <input id="input-enemigo" disabled value="COMPUTADORA"/>
+                </label>
+                <label>Computadora?
+                    <input type="checkbox" id="es-computadora" checked/>
+                </label>
+            </div>
+
+            <div>
+                <label>Tipo de Juego:
+                    <label>Cantidad:
+                        <input type="radio" name="tipo-juego" id="cantidad" />
+                    </label>
+                    <label>Mayoria:
+                        <input type="radio" name="tipo-juego" id="mayoria" />
+                    </label>
+                    <label>Diferencia:
+                        <input type="radio" name="tipo-juego" id="diferencia" />
+                    </label>
+                </label>
+                <label>Rondas:
+                    <input type="number" id="rondas" min="1" value="1" />
+                </label>
+            </div>
+        </div>
+
+        <div id="reglas">Piedra <- Papel <- Tijera <- Piedra</div>
+    </section>
+    
+    <section id="combate">
+        <h1 class="titulo">Piedra, papel o tijera</h1>
+
+        <div id="pantalla-combate">
+            <div id="combate-jugador">
+                <div class="botones">
+                    <button id="boton-piedra-jugador">Piedra 🪨</button>
+                    <button id="boton-papel-jugador">Papel 📄</button>
+                    <button id="boton-tijera-jugador">Tijera ✂️</button>
+                </div>
+
+                <div class="tarjeta-resultado">
+                    <p id="nombre-jugador">Jugador</p>
+                    <img id="eleccion-jugador" />
+                    <p id="puntaje-jugador">0</p>
+                </div>
+                <p>V</p>
+            </div>
+
+            <div id="combate-enemigo">
+                <p>S</p>
+                <div class="tarjeta-resultado">
+                    <p id="nombre-enemigo">Enemigo</p>
+                    <img id="eleccion-enemigo" />
+                    <p id="puntaje-enemigo">0</p>
+                </div>
+
+                <div class="botones">
+                    <button id="boton-piedra-enemigo">Piedra 🪨</button>
+                    <button id="boton-papel-enemigo">Papel 📄</button>
+                    <button id="boton-tijera-enemigo">Tijera ✂️</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fin">
+        <h1 class="titulo">Piedra, papel o tijera</h1>
+
+        <div>
+            <img />
+            <p id="nombre-jugador">Jugador</p>
+        </div>
+
+        <button>Volver a Jugar</button>
+
+        <div>
+            <img />
+            <p id="nombre-enemigo">Enemigo</p>
+        </div>
+    </section>
+    <script src="./js/codigo.js"></script>
+</body>
+
+</html>
