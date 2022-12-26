@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Algoritmo de Piedra, papel o tijera en Javascript</title>
+        <script>
+            function numeroAleatorio(min, max){
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+            
+            function mensajeEleccion(eleccion){
+                if (eleccion == 1){
+                    return "PIEDRA";
+                }
+                if (eleccion == 2){
+                    return "PAPEL";
+                }
+                if (eleccion == 3){
+                    return "TIJERA";
+                }
+                
+                return "¡-ERROR-!";
+            }
+            
+            function combate (eleccionJ, eleccionC){
+                if (eleccionJ == eleccionC){
+                    alert("EMPATE.");
+                    return 0;
+                }
+                if ((eleccionJ == 1 && eleccionC == 3) || (eleccionJ == 2 && eleccionC == 1) || (eleccionJ == 3 && eleccionC == 2)){
+                    alert("GANASTE.");
+                    return 10;
+                }
+                
+                alert("PERDISTE.");
+                return 1;
+            }
+            
+            let computadora = 0;
+            let jugador = 0;
+            let victorias = 0;
+            
+            while (victorias / 10 < 3 && victorias % 10 < 3){
+                computadora = numeroAleatorio(1,3);
+                jugador = prompt("Ingrese 1:Piedra - 2:Papel - 3:Tijera");
+            
+                alert("J:-" + mensajeEleccion(jugador) + "- |VS| -" + mensajeEleccion(computadora) + "-:C");
+                
+                victorias = victorias + combate(jugador, computadora);
+            }
+            
+            alert("J:-" + Math.floor(victorias/10) + "《RACHAS》" + victorias%10 + "-:C");
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
