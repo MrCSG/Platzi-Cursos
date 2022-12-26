@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: darkblue;
+}
+
+#elegir-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.titulo{
+    color: white;
+    font-size: 32px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.subtitulo{
+    color: white;
+    font-size: 20px;
+}
+
+.tarjetas, .botones-ataque{
+    display: flex;
+    gap: 10px;
+}
+
+.tarjeta-de-mokepon{
+    color: white;
+    width: 180px;
+    height: 100px;
+    background: blue;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta-de-mokepon img{
+    height: 80px;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    background: lightblue;
+}
+
+#boton-mascota{
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    margin-top: 30px;
+}
+
+#ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver-mapa button{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    margin: 10px 0px;
+}
+
+#elegir-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque{
+    background-color: blue;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 80px;
+    color: white;
+}
+ 
+#mensajes{
+    width: 280;
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar{
+    border: none;
+    color: blue;
+}
+
+.log-combate{
+    width: 340px;
+    background: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 160px 160px;
+    justify-content: space-between;
+}
+
+.tarjeta-combate{
+    background: salmon;
+    color: white;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 560px){
+    .tarjetas, .botones-ataque{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 300px){
+    #ver-mapa div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
